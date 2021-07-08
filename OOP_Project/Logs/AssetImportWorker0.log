@@ -143,3 +143,19 @@ System memory in use after: 58.4 MB.
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1563.
 Total: 2.589200 ms (FindLiveObjects: 0.357800 ms CreateObjectMapping: 0.043900 ms MarkObjects: 1.826800 ms  DeleteObjects: 0.359600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 660.771408 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98e229e239d83202abee798457630585') in 0.011839 seconds
+  Import took 0.112426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.255165 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dfe275d90cd94d25fdd7805b773d949') in 0.007406 seconds
+  Import took 0.125317 seconds .
+
