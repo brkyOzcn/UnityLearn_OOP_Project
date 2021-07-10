@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 544818845f2d7354585f262e565790f3, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160377340}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &428985347
 SphereCollider:
@@ -580,7 +580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160377340}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &969965161
 SphereCollider:
@@ -656,13 +656,27 @@ GameObject:
   - component: {fileID: 1160377339}
   - component: {fileID: 1160377338}
   - component: {fileID: 1160377337}
+  - component: {fileID: 1160377336}
   m_Layer: 0
   m_Name: Cannon1
-  m_TagString: Untagged
+  m_TagString: Cannon1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1160377336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160377335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc889e6ec2a04044eb0e604a489053e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 3757735378723157463, guid: 2be8b3924eeb1c2478df729b50351221, type: 3}
 --- !u!136 &1160377337
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -737,8 +751,8 @@ Transform:
   m_LocalPosition: {x: 3.41, y: 1.0037308, z: 21.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 428985346}
   - {fileID: 969965160}
+  - {fileID: 428985346}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -74, y: 0, z: 0}
@@ -944,9 +958,10 @@ GameObject:
   - component: {fileID: 1548654696}
   - component: {fileID: 1548654695}
   - component: {fileID: 1548654694}
+  - component: {fileID: 1548654698}
   m_Layer: 0
   m_Name: Cannon2
-  m_TagString: Untagged
+  m_TagString: Cannon2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,6 +1045,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -74, y: 0, z: 0}
+--- !u!114 &1548654698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548654693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342f5c69990e40d4d95c56fb741ce18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 3757735378723157463, guid: 2be8b3924eeb1c2478df729b50351221, type: 3}
 --- !u!1 &1644739751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1086,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1135,13 +1163,27 @@ GameObject:
   - component: {fileID: 1958302184}
   - component: {fileID: 1958302183}
   - component: {fileID: 1958302182}
+  - component: {fileID: 1958302181}
   m_Layer: 0
   m_Name: Cannon3
-  m_TagString: Untagged
+  m_TagString: Cannon3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1958302181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958302180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc09e38c5a45e749b67bc6228d16832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 3757735378723157463, guid: 2be8b3924eeb1c2478df729b50351221, type: 3}
 --- !u!136 &1958302182
 CapsuleCollider:
   m_ObjectHideFlags: 0

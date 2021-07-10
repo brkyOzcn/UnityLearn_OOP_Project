@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private SpawnManager gameStatus;
-    private int enemySpeed = 10;  // Encapsulation will be implemented here.
+    private int enemySpeed = 10;
 
     void Start()
     {
