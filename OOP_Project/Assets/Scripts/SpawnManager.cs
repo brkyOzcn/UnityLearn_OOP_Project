@@ -6,23 +6,21 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
     public bool gameOver = false;
+    public Color[] col =  {Color.blue, Color.yellow, Color.red};
+    private int randomColor;
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 2, 5.0f);
-    }
-
-    
-    void Update()
-    {
-        
+        InvokeRepeating("SpawnEnemy", 0.5f, 1.5f);
     }
 
     void SpawnEnemy()
     {
         if (gameOver == false)
         {
-            Instantiate(enemyPrefab.gameObject, new Vector3(0, 2, -3), enemyPrefab.gameObject.transform.rotation);
+            Instantiate(enemyPrefab, new Vector3(0, 2, -3), enemyPrefab.transform.rotation);
+            randomColor = Random.Range(0, 3);
+            enemyPrefab.GetComponent<Renderer>().sharedMaterial.color = col[randomColor];
         }
     }
 

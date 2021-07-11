@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hit The Wall
+  m_Text: True Color
 --- !u!222 &311353301
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -6,8 +6,9 @@ public abstract class Cannons : MonoBehaviour
 {
     [SerializeField] protected GameObject ballPrefab;
     protected Vector3 ballPosition;
-    protected GameObject spawned;
+    protected static GameObject spawned;
     private int ballSpeed = 10;
+    private SpawnManager gameStatus;
 
     protected virtual void Start()
     {
@@ -28,19 +29,38 @@ public abstract class Cannons : MonoBehaviour
         }
 
         renderer.SetPropertyBlock(cannonColor);
+
+        gameStatus = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+    }
+
+    private void Update()
+    {
+        if (spawned != null)
+        {
+            spawned.transform.Translate(ballSpeed * Time.deltaTime * Vector3.back);
+
+            if (spawned.transform.position.z < -16)
+            {
+                Destroy(spawned);
+            }
+        }
+
+
+    }
+
+    protected virtual void OnMouseDown()
+    {
+        if (spawned == null & gameStatus.gameOver == false)
+        {
+            FireBall(ballPosition);
+        }
+
     }
 
     protected void FireBall(Vector3 ballPosition)
     {
-        if (spawned == null)
-        {
-            spawned = Instantiate(ballPrefab, ballPosition, ballPrefab.transform.rotation);
-        }
-
-        spawned.transform.Translate(ballSpeed * Time.deltaTime * Vector3.back);
-        
+        spawned = Instantiate(ballPrefab, ballPosition, ballPrefab.transform.rotation);
     }
 
-   
-
+    protected abstract void SetBallColor();
 }

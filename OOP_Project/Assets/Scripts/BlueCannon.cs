@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BlueCannon : Cannons
-{
-    
+{    
     protected override void Start()
     {
         base.Start();
@@ -12,10 +11,19 @@ public class BlueCannon : Cannons
 
     }
 
-
-    private void Update()
+    protected override void OnMouseDown()
     {
-        FireBall(ballPosition);
+        base.OnMouseDown();
+        SetBallColor();
     }
 
+    protected override void SetBallColor()
+    {
+        if (spawned != null)
+        {
+            spawned.GetComponent<Renderer>().sharedMaterial.color = Color.blue;
+        }
+    }
+
+    
 }
