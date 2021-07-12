@@ -7,8 +7,24 @@ public abstract class Cannons : MonoBehaviour
     [SerializeField] protected GameObject ballPrefab;
     protected Vector3 ballPosition;
     protected static GameObject spawned;
-    private int ballSpeed = 10;
     private SpawnManager gameStatus;
+    private int m_ballSpeed = 10;
+    public int ballSpeed
+    {
+        get { return m_ballSpeed; }
+        set
+        {
+            if (value < 0)
+            {
+                Debug.LogError("Ball speed can't be negative!");
+            }
+            else
+            {
+                m_ballSpeed = value;
+            }
+        }
+    }
+
 
     protected virtual void Start()
     {

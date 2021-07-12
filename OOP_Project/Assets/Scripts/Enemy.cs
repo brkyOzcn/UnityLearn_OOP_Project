@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     private SpawnManager gameStatus;
     private const int enemySpeed = 20;
+    [SerializeField] GameObject explosionParticle;
+    [SerializeField] GameObject loseExplosion;
 
     void Start()
     {
@@ -33,8 +35,16 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Renderer>().sharedMaterial.color == gameObject.GetComponent<Renderer>().sharedMaterial.color)
         {
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
+        }
+        else
+        {
+            Instantiate(loseExplosion, transform.position, loseExplosion.transform.rotation);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            gameStatus.gameOver = true;
         }
     }
 
